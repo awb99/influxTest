@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InfluxData.Net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\InfluxData.Net\lib\netstandard2.0\InfluxData.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="InfluxData.Net.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\InfluxData.Net\lib\netstandard2.0\InfluxData.Net.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="InfluxData.Net.InfluxDb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\InfluxData.Net\lib\netstandard2.0\InfluxData.Net.InfluxDb.dll</HintPath>
+    </Reference>
+    <Reference Include="InfluxData.Net.Kapacitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\InfluxData.Net\lib\netstandard2.0\InfluxData.Net.Kapacitor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
