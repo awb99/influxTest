@@ -3,18 +3,24 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="InfluxData.Net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\InfluxData.Net\lib\netstandard2.0\InfluxData.Net.dll</HintPath>
+      <HintPath>..\packages\InfluxData.Net\lib\net461\InfluxData.Net.dll</HintPath>
     </Reference>
     <Reference Include="InfluxData.Net.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\InfluxData.Net\lib\netstandard2.0\InfluxData.Net.Common.dll</HintPath>
+      <HintPath>..\packages\InfluxData.Net\lib\net461\InfluxData.Net.Common.dll</HintPath>
     </Reference>
     <Reference Include="InfluxData.Net.InfluxDb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\InfluxData.Net\lib\netstandard2.0\InfluxData.Net.InfluxDb.dll</HintPath>
+      <HintPath>..\packages\InfluxData.Net\lib\net461\InfluxData.Net.InfluxDb.dll</HintPath>
     </Reference>
     <Reference Include="InfluxData.Net.Kapacitor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\packages\InfluxData.Net\lib\netstandard2.0\InfluxData.Net.Kapacitor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\System.Net.Http\lib\net46\System.Net.Http.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

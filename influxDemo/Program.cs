@@ -14,15 +14,16 @@ namespace influxDemo
         {
             Console.WriteLine("Hello World!");
             demo();
-
         }
         
         static async void demo ()
         {
            try   {
-           // InfluxDbClient
-            var influxDbClient = new InfluxDbClient("http://metrics.hoertlehner.com:8086/", "a", "b", InfluxDbVersion.v_1_0_0); //.v_1_3);
+                // InfluxDbClient
+               var influxDbClient = new InfluxDbClient("http://metrics.hoertlehner.com:8086/", "flo", "flo", InfluxDbVersion.v_1_0_0); //.v_1_3);
                
+               
+               Console.WriteLine("Pinging..");
                var responseP = await influxDbClient.Diagnostics.PingAsync();
                Console.WriteLine(responseP);
                

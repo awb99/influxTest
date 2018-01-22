@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "influxDemo", "influxDemo\influxDemo.csproj", "{A16C2F88-5B57-4346-9136-718A652BFF0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet47demo", "dotnet47demo\dotnet47demo.csproj", "{43FB4A69-F2F4-460F-B60C-B5644A4CB730}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A16C2F88-5B57-4346-9136-718A652BFF0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A16C2F88-5B57-4346-9136-718A652BFF0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A16C2F88-5B57-4346-9136-718A652BFF0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A16C2F88-5B57-4346-9136-718A652BFF0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43FB4A69-F2F4-460F-B60C-B5644A4CB730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43FB4A69-F2F4-460F-B60C-B5644A4CB730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43FB4A69-F2F4-460F-B60C-B5644A4CB730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43FB4A69-F2F4-460F-B60C-B5644A4CB730}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
