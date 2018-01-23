@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices.ComTypes;
@@ -8,6 +9,7 @@ using InfluxData.Net.InfluxData;
 using InfluxData.Net.Common.Enums;
 using  InfluxData.Net.InfluxDb;
 using InfluxData.Net.InfluxData.Helpers;
+using InfluxData.Net.InfluxDb.Models;
 using Microsoft.Win32.SafeHandles;
 
 namespace dotnet47demo
@@ -77,15 +79,44 @@ namespace dotnet47demo
                 
                 Console.WriteLine("getting data..done.");
                 Console.WriteLine(response);
-             
+
+                await WriteData(influxDbClient);
 
             } catch (Exception ex) {
                 Console.WriteLine("exception " + ex.Message );
-              
+        
 
             }
 
             return 13;
-        }     
+        }
+
+
+        static async Task<bool> WriteData ( InfluxDbClient influxDbClient)
+        {
+            var response1 = await influxDbClient.Database.CreateDatabaseAsync("stockdemo");
+            
+            var pointToWrite = new Point()
+            {
+                Name = "reading", // serie/measurement/table to write into
+                Tags = new Dictionary<string, object>()
+                {
+                    {"SensorId", 8},
+                    {"SerialNumber", "00AF123B"}
+                },
+                Fields = new Dictionary<string, object>()
+                {
+                    {"SensorState", "act"},
+                    {"Humidity", 431},
+                    {"Temperature", 22.1},
+                    {"Resistance", 34957}
+                },
+                Timestamp = DateTime.UtcNow // optional (can be set to any DateTime moment)
+            };
+   
+
+            var response = await influxDbClient.Client.WriteAsync(pointToWrite, "stockdemo");
+            return true;
+        }
     }
 }
